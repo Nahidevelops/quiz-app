@@ -1,38 +1,81 @@
-.App {
+/* App.css */
+
+.quiz-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.intro-page, .quiz-page, .result-page {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quiz-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.start-btn, .option-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  margin: 10px;
+  transition: transform 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.start-btn:hover, .option-btn:hover {
+  transform: scale(1.05);
+}
+
+.question {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.options {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+/* Update the skip button CSS and position */
+
+.skip-btn {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
   color: white;
+  background: linear-gradient(45deg, #f12711, #f5af19);
+  transition: transform 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.skip-btn:hover {
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
